@@ -19,5 +19,5 @@
 package org.edgexfoundry.support.domain.notifications;
 
 public enum ChannelType {
-  REST, EMAIL, MQTT;
+  REST, EMAIL, MQTT, AZURE;
 }

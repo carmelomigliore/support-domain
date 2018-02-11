@@ -26,7 +26,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 @JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, property = "type")
 @JsonSubTypes({@JsonSubTypes.Type(value = RESTfulChannel.class, name = "REST"),
     @JsonSubTypes.Type(value = EmailChannel.class, name = "EMAIL"),
-        @JsonSubTypes.Type(value = MQTTChannel.class, name = "MQTT")})
+        @JsonSubTypes.Type(value = MQTTChannel.class, name = "MQTT"),
+        @JsonSubTypes.Type(value = AzureChannel.class, name = "AZURE") })
 public abstract class Channel {
 
   protected ChannelType type;
